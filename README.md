@@ -1,4 +1,4 @@
-# Questionrrr - Questioning App Made Simple
+# Questionrrr - Questionnaires Made Simple 
 
 > Work In Progress
 
