@@ -4,12 +4,12 @@
 
 Questionrrr makes creating online questionnaires a breeze.
 
-1. Download the project
-2. Execute `npm install`
-2. Add your questions into questionrrr.json 
-3. Execute `npm run build`
+1. Download the app
+2. Setup with `npm install`
+2. Add your questions to `questionrrr.json`
+3. Build with `npm run build`
 
-Your questionnaire is available into the build directory. 
+Your questionnaire is available in the `build` directory. 
 
-Just serve it online :) 
+Serve it online! 😊
 
