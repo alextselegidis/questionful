@@ -5,9 +5,10 @@
         "headers": {}
     }, 
     "styles": {
-        "background-color": "#aa146e",
-        "font-color": "#ffffff", 
-        "progress-color": "#49c3e5"
+        "backgroundColor": "#aa146e",
+        "fontColor": "#ffffff",
+        "progressColor": "#49c3e5",
+        "fontFamily": "'Open Sans', Helvetica, Arial, sans-serif"
     }, 
     "questions": [
         {

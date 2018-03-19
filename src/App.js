@@ -49,8 +49,14 @@ class App extends Component {
             api: this.api
         };
 
+        const style = {
+            background: this.state.config.styles.backgroundColor,
+            color: this.state.config.styles.fontColor,
+            fontFamily: this.state.config.styles.fontFamily
+        };
+
         return (
-            <div className="App">
+            <div className="App" style={style}>
                 <header>
                     <ProgressBox {...props} />
                 </header>
