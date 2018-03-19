@@ -67,9 +67,9 @@ class App extends Component {
                 <p className={this.state.message.type}>{this.state.message.text}</p>
                 <QuestionBox {...props} />
                 <footer>
-                    <a href="http://alextselegidis.com" style={linkStyle}>Alex Tselegidis</a>
-                    &nbsp;
                     Copyright &copy; {(new Date()).getFullYear()}
+                    &nbsp;-&nbsp;
+                    <a href="http://alextselegidis.com" style={linkStyle}>Alex Tselegidis</a>
                 </footer>
             </div>
         );
