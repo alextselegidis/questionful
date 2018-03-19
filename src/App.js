@@ -49,20 +49,28 @@ class App extends Component {
             api: this.api
         };
 
-        const style = {
+        const appStyle = {
             background: this.state.config.styles.backgroundColor,
             color: this.state.config.styles.fontColor,
             fontFamily: this.state.config.styles.fontFamily
         };
 
+        const linkStyle = {
+            color: this.state.config.styles.fontColor
+        };
+
         return (
-            <div className="App" style={style}>
+            <div className="App" style={appStyle}>
                 <header>
                     <ProgressBox {...props} />
                 </header>
                 <p className={this.state.message.type}>{this.state.message.text}</p>
                 <QuestionBox {...props} />
-                <footer>Copyright &copy; {(new Date()).getFullYear()}</footer>
+                <footer>
+                    <a href="http://alextselegidis.com" style={linkStyle}>Alex Tselegidis</a>
+                    &nbsp;
+                    Copyright &copy; {(new Date()).getFullYear()}
+                </footer>
             </div>
         );
     }
