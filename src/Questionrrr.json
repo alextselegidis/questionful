@@ -2,7 +2,7 @@
     "title": "Questionrrr", 
     "submission": {
         "url": "http://submission/url", 
-        "headers": []
+        "headers": {}
     }, 
     "styles": {
         "background-color": "#aa146e",

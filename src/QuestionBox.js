@@ -50,8 +50,18 @@ class QuestionBox extends Component {
     }
 
     submitAnswers(answers) {
-        console.log('Submit form data was called.');
-        console.log(answers);
+        fetch(this.props.state.config.submission.url, {
+            method: 'POST',
+            headers: Object.assign({'Content-Type': 'application/json'}, this.props.state.config.submission.headers),
+            body: JSON.stringify(answers)
+        })
+            .then(response => {
+                console.info('Submit form data has succeeded.', response);
+            })
+            .catch(error => {
+                this.props.api.showMessage('Could not submit answers.', 'error');
+                console.error('Submit form data has failed.', error);
+            });
     }
 
     render() {
@@ -64,7 +74,7 @@ class QuestionBox extends Component {
         return (
             <form className="QuestionBox" onSubmit={this.onSubmit.bind(this)}>
                 <h1>{this.props.state.question.title}</h1>
-                <input onChange={this.onChange.bind(this)} value={this.state.value} />
+                <input onChange={this.onChange.bind(this)} value={this.state.value}/>
                 <button type="submit">{buttonLabel}</button>
             </form>
         )
