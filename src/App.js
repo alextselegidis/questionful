@@ -1,19 +1,21 @@
 import React, {Component} from 'react';
 import ProgressBox from './ProgressBox';
 import QuestionBox from './QuestionBox';
-import ActionBox from './ActionBox';
 import './App.css';
 
-const config = require('./questionrrr.json');
+const config = require('./Questionrrr.json');
 
 class App extends Component {
     state = {
         config: config,
         question: null,
+        answers: [],
         message: {
             type: '',
             text: ''
-        }
+        },
+        isLastQuestion: false,
+        currentQuestionIndex: 0,
     };
 
     api = {
@@ -30,7 +32,7 @@ class App extends Component {
         }
     };
 
-    componentDidMount() {
+    componentWillMount() {
         if (!this.state.config) {
             this.api.showMessage('No configuration provided!', 'error');
             return;
@@ -48,13 +50,12 @@ class App extends Component {
         };
 
         return (
-            <div>
+            <div className="App">
                 <header>
                     <ProgressBox {...props} />
                 </header>
                 <p className={this.state.message.type}>{this.state.message.text}</p>
                 <QuestionBox {...props} />
-                <ActionBox {...props} />
                 <footer>Copyright &copy; {(new Date()).getFullYear()}</footer>
             </div>
         );

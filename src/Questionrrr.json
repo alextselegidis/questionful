@@ -12,7 +12,7 @@
     "questions": [
         {
             "id": "name", 
-            "question": "What is your name?"
+            "title": "What is your name?"
         }
     ]
 }
