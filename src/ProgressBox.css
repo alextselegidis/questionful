@@ -1,0 +1,11 @@
+.ProgressBox {
+    margin-bottom: 45px;
+}
+
+.ProgressBox h1 {
+    font-weight: lighter;
+}
+
+.ProgressBox h1 strong {
+    font-weight: bold;
+}

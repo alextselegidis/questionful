@@ -7,7 +7,9 @@ class ProgressBox extends Component {
 
         return (
             <div className="ProgressBox">
-                <h1>Question {index} of {this.props.state.config.questions.length}</h1>
+                <h1>
+                    Question <strong>{index}</strong> of <strong>{this.props.state.config.questions.length}</strong>
+                </h1>
             </div>
         )
     }
