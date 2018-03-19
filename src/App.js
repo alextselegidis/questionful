@@ -10,21 +10,15 @@ class App extends Component {
         config: config,
         question: null,
         answers: [],
-        message: {
-            type: '',
-            text: ''
-        },
+        message: 'test this',
         isLastQuestion: false,
         currentQuestionIndex: 0,
     };
 
     api = {
-        showMessage: (text, type = 'success') => {
+        showMessage: (message) => {
             this.setState({
-                message: {
-                    type,
-                    text
-                }
+                message
             });
         },
         updateState: (newState) => {
@@ -34,7 +28,7 @@ class App extends Component {
 
     componentWillMount() {
         if (!this.state.config) {
-            this.api.showMessage('No configuration provided!', 'error');
+            this.api.showMessage('Error! No configuration provided.');
             return;
         }
 
@@ -64,7 +58,7 @@ class App extends Component {
                 <header>
                     <ProgressBox {...props} />
                 </header>
-                <p className={this.state.message.type}>{this.state.message.text}</p>
+                <em>{this.state.message}</em>
                 <QuestionBox {...props} />
                 <footer>
                     Copyright &copy; {(new Date()).getFullYear()}

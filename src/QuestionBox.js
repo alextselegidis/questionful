@@ -35,7 +35,7 @@ class QuestionBox extends Component {
         const question = this.props.state.config.questions[currentQuestionIndex];
 
         if (!question) {
-            this.props.api.showMessage('Congratulations! You have completed all questions!', 'success');
+            this.props.api.showMessage('Congratulations! You have completed all questions.');
 
             // Send the form information into the provided endpoint.
             if (this.props.state.config.submission.url) {
@@ -63,7 +63,7 @@ class QuestionBox extends Component {
                 console.info('Submit form data has succeeded.', response);
             })
             .catch(error => {
-                this.props.api.showMessage('Could not submit answers.', 'error');
+                this.props.api.showMessage('Error! Could not submit answers.');
                 console.error('Submit form data has failed.', error);
             });
     }
