@@ -13,6 +13,10 @@
         {
             "id": "name", 
             "title": "What is your name?"
+        },
+        {
+            "id": "age",
+            "title": "What is your age?"
         }
     ]
 }

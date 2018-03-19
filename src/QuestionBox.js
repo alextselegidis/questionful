@@ -2,13 +2,23 @@ import React, {Component} from 'react';
 import './QuestionBox.css';
 
 class QuestionBox extends Component {
+    state = {
+        value: ''
+    };
+
     onChange(event) {
+        this.setState({
+            value: event.target.value
+        })
+
         this.props.api.updateState({
             question: Object.assign(this.props.state.question, {answer: event.target.value})
         });
     }
 
-    onSubmit() {
+    onSubmit(event) {
+        event.preventDefault();
+
         // Store current answer to the collection of answers.
         const answers = [...this.props.state.answers, this.props.state.question];
 
@@ -33,6 +43,10 @@ class QuestionBox extends Component {
             currentQuestionIndex,
             question
         });
+
+        this.setState({
+            value: ''
+        });
     }
 
     submitAnswers(answers) {
@@ -50,7 +64,7 @@ class QuestionBox extends Component {
         return (
             <form className="QuestionBox" onSubmit={this.onSubmit.bind(this)}>
                 <h1>{this.props.state.question.title}</h1>
-                <input onChange={this.onChange.bind(this)} />
+                <input onChange={this.onChange.bind(this)} value={this.state.value} />
                 <button type="submit">{buttonLabel}</button>
             </form>
         )
