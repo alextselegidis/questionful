@@ -19,6 +19,10 @@ class QuestionBox extends Component {
     onSubmit(event) {
         event.preventDefault();
 
+        if (!this.props.state.question.answer) {
+            return;
+        }
+
         // Store current answer to the collection of answers.
         const answers = [...this.props.state.answers, this.props.state.question];
 
@@ -69,7 +73,7 @@ class QuestionBox extends Component {
             return null;
         }
 
-        const buttonLabel = this.props.state.isLastQuestion ? 'Submit' : 'Continue';
+        const buttonLabel = this.props.state.currentQuestionIndex === (this.props.state.config.questions.length - 1) ? 'Submit' : 'Continue';
 
         return (
             <form className="QuestionBox" onSubmit={this.onSubmit.bind(this)}>

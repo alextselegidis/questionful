@@ -1,0 +1,37 @@
+.QuestionBox h1 {
+    margin-bottom: 45px;
+}
+
+.QuestionBox input {
+    display: block;
+    background: none;
+    border-top: none;
+    border-left: none;
+    border-right: none;
+    border-bottom: 2px solid white;
+    width: 85%;
+    padding: 15px;
+    margin-bottom: 30px;
+    box-sizing: border-box;
+    margin: 0 auto 45px auto;
+    color: white;
+}
+
+.QuestionBox input:active,
+.QuestionBox input:focus {
+    background: #00000014;
+}
+
+.QuestionBox button {
+    background: none;
+    border: 1px solid white;
+    padding: 15px 30px;
+    min-width: 200px;
+    color: white;
+    text-transform: uppercase;
+}
+
+.QuestionBox button:hover {
+    opacity: 0.8;
+    cursor: pointer;
+}
