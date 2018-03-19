@@ -10,7 +10,7 @@ class App extends Component {
         config: config,
         question: null,
         answers: [],
-        message: 'test this',
+        message: '',
         isLastQuestion: false,
         currentQuestionIndex: 0,
     };
