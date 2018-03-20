@@ -73,13 +73,23 @@ class QuestionBox extends Component {
             return null;
         }
 
+        const inputStyle = {
+            color: this.props.state.config.styles.primaryFontColor,
+            borderColor: this.props.state.config.styles.primaryFontColor
+        };
+
+        const buttonStyle = {
+            color: this.props.state.config.styles.primaryFontColor,
+            borderColor: this.props.state.config.styles.primaryFontColor
+        };
+
         const buttonLabel = this.props.state.currentQuestionIndex === (this.props.state.config.questions.length - 1) ? 'Submit' : 'Continue';
 
         return (
             <form className="QuestionBox" onSubmit={this.onSubmit.bind(this)}>
                 <h1>{this.props.state.question.title}</h1>
-                <input onChange={this.onChange.bind(this)} value={this.state.value}/>
-                <button type="submit">{buttonLabel}</button>
+                <input onChange={this.onChange.bind(this)} value={this.state.value} style={inputStyle}/>
+                <button type="submit" style={buttonStyle}>{buttonLabel}</button>
             </form>
         )
     }

@@ -6,8 +6,8 @@
     }, 
     "styles": {
         "backgroundColor": "#aa146e",
-        "fontColor": "#ffffff",
-        "progressColor": "#49c3e5",
+        "primaryFontColor": "#ffffff",
+        "secondaryFontColor": "#640c41",
         "fontFamily": "'Open Sans', Helvetica, Arial, sans-serif"
     }, 
     "questions": [

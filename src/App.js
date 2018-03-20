@@ -45,12 +45,12 @@ class App extends Component {
 
         const appStyle = {
             background: this.state.config.styles.backgroundColor,
-            color: this.state.config.styles.fontColor,
+            color: this.state.config.styles.primaryFontColor,
             fontFamily: this.state.config.styles.fontFamily
         };
 
-        const linkStyle = {
-            color: this.state.config.styles.fontColor
+        const footerStyle = {
+            color: this.state.config.styles.secondaryFontColor
         };
 
         return (
@@ -60,10 +60,10 @@ class App extends Component {
                 </header>
                 <em>{this.state.message}</em>
                 <QuestionBox {...props} />
-                <footer>
+                <footer style={footerStyle}>
                     Copyright &copy; {(new Date()).getFullYear()}
                     &nbsp;-&nbsp;
-                    <a href="http://alextselegidis.com" style={linkStyle}>Alex Tselegidis</a>
+                    <a href="http://alextselegidis.com" style={footerStyle}>Alex Tselegidis</a>
                 </footer>
             </div>
         );

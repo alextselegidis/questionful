@@ -9,7 +9,11 @@
     opacity: 0.7;
 }
 
-footer {
+.App header {
+    padding-top: 45px;
+}
+
+.App footer {
     position: absolute;
     bottom: 0;
     width: 100%;

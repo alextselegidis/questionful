@@ -1,5 +1,6 @@
 .QuestionBox h1 {
     margin-bottom: 45px;
+    text-shadow: 7px 5px 12px #00000052;
 }
 
 .QuestionBox input {
@@ -8,13 +9,13 @@
     border-top: none;
     border-left: none;
     border-right: none;
-    border-bottom: 1px solid white;
+    border-bottom: 1px solid;
     width: 85%;
+    max-width: 750px;
     padding: 15px;
     margin-bottom: 30px;
     box-sizing: border-box;
     margin: 0 auto 45px auto;
-    color: white;
 }
 
 .QuestionBox input:active,
@@ -24,10 +25,9 @@
 
 .QuestionBox button {
     background: none;
-    border: 1px solid white;
+    border: 1px solid;
     padding: 15px 30px;
     min-width: 200px;
-    color: white;
     text-transform: uppercase;
 }
 
