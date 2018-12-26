@@ -1,8 +1,8 @@
-# Questionrrr - Questionnaires Made Simple 
+# Questionful - Questionnaires Made Simple 
 
 > Work In Progress
 
-Questionrrr makes creating online questionnaires a breeze.
+Questionful makes creating online questionnaires a breeze.
 
 1. Download the app
 2. Setup with `npm install`
