@@ -3,7 +3,7 @@ import ProgressBox from './ProgressBox';
 import QuestionBox from './QuestionBox';
 import './App.css';
 
-const config = require('./Questionrrr.json');
+const config = require('./Questionful.json');
 
 class App extends Component {
     state = {
@@ -63,7 +63,7 @@ class App extends Component {
                 <footer style={footerStyle}>
                     Copyright &copy; {(new Date()).getFullYear()}
                     &nbsp;-&nbsp;
-                    <a href="http://alextselegidis.com" style={footerStyle}>Alex Tselegidis</a>
+                    <a href="https://alextselegidis.com" target="_blank" style={footerStyle}>Alex Tselegidis</a>
                 </footer>
             </div>
         );

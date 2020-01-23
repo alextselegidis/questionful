@@ -1,18 +1,18 @@
 {
-    "title": "Questionrrr", 
+    "title": "Questionful",
     "submission": {
-        "url": "http://submission/url", 
+        "url": "http://submission/url",
         "headers": {}
-    }, 
+    },
     "styles": {
         "backgroundColor": "#aa146e",
         "primaryFontColor": "#ffffff",
         "secondaryFontColor": "#640c41",
         "fontFamily": "'Open Sans', Helvetica, Arial, sans-serif"
-    }, 
+    },
     "questions": [
         {
-            "id": "name", 
+            "id": "name",
             "title": "What is your name?"
         },
         {
