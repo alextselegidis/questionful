@@ -20,8 +20,6 @@
   <a href="#license">License</a>
 </p>
 
-![screenshot](screenshot.gif)
-
 ## About
 
 Questionful makes creating online questionnaires a breeze.
