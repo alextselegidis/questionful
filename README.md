@@ -14,6 +14,11 @@
 </h4>
 
 <p align="center">
+  <img alt="GitHub" src="https://img.shields.io/github/license/alextselegidis/questionful?style=for-the-badge">
+  <img alt="GitHub release (latest by date)" src="https://img.shields.io/github/v/release/alextselegidis/questionful?style=for-the-badge">
+</p>
+
+<p align="center">
   <a href="#about">About</a> •
   <a href="#setup">Setup</a> •
   <a href="#build">Build</a> •
