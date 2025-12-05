@@ -1,9 +1,21 @@
+/* ----------------------------------------------------------------------------
+ * Questionful - Questionnaires Made Simple
+ *
+ * @package     Questionful
+ * @author      A.Tselegidis <alextselegidis@gmail.com>
+ * @copyright   Copyright (c) Alex Tselegidis
+ * @license     https://opensource.org/licenses/GPL-3.0 - GPLv3
+ * @link        https://questionful.org
+ * @since       v1.0.x
+ * ---------------------------------------------------------------------------- */
+
 .ProgressBox {
     margin-bottom: 45px;
 }
 
 .ProgressBox h1 {
     font-weight: lighter;
+    text-align: center;
 }
 
 .ProgressBox h1 strong {

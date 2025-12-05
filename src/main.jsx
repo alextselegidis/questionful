@@ -9,31 +9,13 @@
  * @since       v1.0.x
  * ---------------------------------------------------------------------------- */
 
-.App {
-    display: flex;
-    flex-direction: column;
-    min-height: 100vh;
-    width: 100%;
-}
+import React from 'react';
+import ReactDOM from 'react-dom/client';
+import './main.css';
+import App from './App';
 
-.App header {
-    padding-top: 45px;
-    flex-shrink: 0;
-}
-
-.ContentArea {
-    flex: 1;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    padding: 20px;
-    overflow: visible !important;
-}
-
-.App footer {
-    flex-shrink: 0;
-    width: 100%;
-    padding: 15px 0;
-    font-size: 0.7rem;
-    text-align: center;
-}
+ReactDOM.createRoot(document.getElementById('root')).render(
+    <React.StrictMode>
+        <App />
+    </React.StrictMode>,
+);

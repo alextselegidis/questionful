@@ -8,7 +8,9 @@
 /coverage
 
 # production
-/build
+node_modules/
+build/
+build.zip
 
 # misc
 .DS_Store

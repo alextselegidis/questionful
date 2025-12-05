@@ -1,7 +1,7 @@
 <h1 align="center">
     <br>
         <a href="https://alextselegidis.com/get/questionful">
-            <img src="https://raw.githubusercontent.com/alextselegidis/questionful/master/questionful.png" alt="Questionful" width="200">
+            <img src="https://raw.githubusercontent.com/alextselegidis/questionful/master/logo.png" alt="Questionful" width="200">
         </a>
         <br>
         <br>
@@ -57,6 +57,34 @@ To build your online questionnaire you have to add your questions to the
 
 Your questionnaire files will become available in the `build` directory, 
 serve them online! 😊
+
+
+## API  Test
+
+To start the fake API server:
+
+npm run fake-server
+
+
+This will start a lightweight Express server on port 4000, which logs submitted questionnaire data to the console.
+
+When the questionnaire completes, Questionful will automatically send the answers to:
+
+http://localhost:4000/submit
+
+
+✅ Example console output:
+
+📬 Received questionnaire submission:
+{
+"answers": [
+{ "questionId": 1, "answer": "Yes" },
+{ "questionId": 2, "answer": "No" }
+],
+"submittedAt": "2025-11-07T14:25:00Z"
+}
+
+You can adjust the port or endpoint inside fake-server.js as needed.
 
 ## License 
 

@@ -1,37 +1,116 @@
-.QuestionBox h1 {
-    margin-bottom: 45px;
-    text-shadow: 7px 5px 12px #00000052;
+/* ----------------------------------------------------------------------------
+ * Questionful - Questionnaires Made Simple
+ *
+ * @package     Questionful
+ * @author      A.Tselegidis <alextselegidis@gmail.com>
+ * @copyright   Copyright (c) Alex Tselegidis
+ * @license     https://opensource.org/licenses/GPL-3.0 - GPLv3
+ * @link        https://questionful.org
+ * @since       v1.0.x
+ * ---------------------------------------------------------------------------- */
+
+.QuestionBox {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 40px 20px;
+    width: 100%;
+    max-width: 700px;
+    text-align: center;
+    opacity: 1;
+    transition: opacity 0.3s ease-in-out;
 }
 
-.QuestionBox input {
+.QuestionBox.fade-in { opacity: 1; }
+.QuestionBox.fade-out { opacity: 0; }
+
+/* Inputs + Textarea */
+.QuestionBox input[type='text'],
+.QuestionBox textarea {
     display: block;
     background: none;
-    border-top: none;
-    border-left: none;
-    border-right: none;
-    border-bottom: 1px solid;
+    border: 1px solid var(--primaryFontColor);
+    border-radius: 6px;
     width: 85%;
-    max-width: 750px;
+    max-width: 500px;
     padding: 15px;
-    margin-bottom: 30px;
-    box-sizing: border-box;
     margin: 0 auto 45px auto;
+    font-size: 1rem;
+    color: var(--primaryFontColor);
+    text-align: center;
 }
 
-.QuestionBox input:active,
-.QuestionBox input:focus {
-    background: #00000014;
+.QuestionBox textarea {
+    min-height: 120px;
+    resize: vertical;
 }
 
+/* Dropdown */
+.QuestionBox select {
+    display: block;
+    margin: 0 auto 45px auto;
+    padding: 12px 15px;
+    font-size: 1rem;
+    border: 1px solid var(--primaryFontColor);
+    border-radius: 6px;
+    width: 85%;
+    max-width: 500px;
+    background: var(--backgroundColor);
+    color: #000;
+}
+
+/* Multiple choice */
+.QuestionBox .multiple-choice {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 12px;
+    margin: 0 auto 45px auto;
+    width: fit-content;
+}
+
+/* Buttons */
 .QuestionBox button {
     background: none;
-    border: 1px solid;
+    border: 1px solid var(--primaryFontColor);
     padding: 15px 30px;
     min-width: 200px;
     text-transform: uppercase;
+    font-weight: bold;
+    border-radius: 8px;
+    transition: all 0.2s ease;
+    margin-top: 20px;
+    cursor: pointer;
 }
 
-.QuestionBox button:hover {
-    opacity: 0.8;
-    cursor: pointer;
+.QuestionBox button:hover:not(:disabled) {
+    transform: scale(1.05);
+    background-color: rgba(0, 0, 0, 0.05);
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+.QuestionBox button:active:not(:disabled) {
+    transform: scale(0.98);
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.2);
+}
+
+.QuestionBox button:disabled {
+    opacity: 0.6;
+    cursor: not-allowed;
+}
+
+.qf-error {
+    color: #ff4d4d;
+    margin-top: 15px;
+    font-size: 0.95rem;
+    font-weight: 500;
+}
+
+.final-message {
+    font-size: 1.4rem;
+    color: var(--primaryFontColor);
+    text-align: center;
+    margin-top: 40px;
+    line-height: 1.6;
 }

@@ -1,0 +1,9 @@
+/.idea
+/.run
+/bootstrap
+/docker
+/lang
+/public
+/routes
+/storage
+/vendor

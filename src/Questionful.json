@@ -1,23 +1,71 @@
 {
-    "title": "Questionful",
+    "type": "form",
+    "title": "Questionful Example Form",
     "submission": {
-        "url": "http://submission/url",
-        "headers": {}
+        "url": "http://localhost:4000/submit",
+        "headers": {
+            "Authorization": "Bearer YOUR_TOKEN_HERE"
+        }
     },
     "styles": {
-        "backgroundColor": "#aa146e",
-        "primaryFontColor": "#ffffff",
-        "secondaryFontColor": "#640c41",
-        "fontFamily": "'Open Sans', Helvetica, Arial, sans-serif"
+        "backgroundColor": "#ffd832",
+        "primaryFontColor": "#333333",
+        "secondaryFontColor": "#666666",
+        "fontFamily": "'Open Sans', Helvetica, Arial, sans-serif",
+        "fontSize": "14px"
     },
-    "questions": [
+    "pages": [
         {
-            "id": "name",
-            "title": "What is your name?"
-        },
-        {
-            "id": "age",
-            "title": "What is your age?"
+            "name": "page-1",
+            "title": "Main Page",
+            "elements": [
+                {
+                    "type": "qf-short-text",
+                    "name": "name",
+                    "title": "What is your name?",
+                    "description": "Please enter your full name.",
+                    "required": true
+                },
+                {
+                    "type": "qf-paragraph",
+                    "name": "bio",
+                    "title": "Tell us a little bit about yourself",
+                    "description": "Write a few sentences about your background or interests.",
+                    "required": false
+                },
+                {
+                    "type": "qf-dropdown",
+                    "name": "favorite_color",
+                    "title": "Choose your favorite color",
+                    "description": "Pick one option that best fits your preference.",
+                    "choices": ["Red", "Green", "Blue", "Yellow"],
+                    "required": true
+                },
+                {
+                    "type": "qf-multiple-choice",
+                    "name": "preferred_pet",
+                    "title": "Which one pet do you prefer?",
+                    "description": "Select only one pet from the options below.",
+                    "choices": ["Dog", "Cat", "Fish"],
+                    "multiple": false,
+                    "required": true
+                },
+                {
+                    "type": "qf-checkboxes",
+                    "name": "hobbies",
+                    "title": "Select all hobbies you enjoy",
+                    "description": "You may choose more than one.",
+                    "choices": ["Reading", "Sports", "Cooking", "Music"],
+                    "multiple": true,
+                    "required": false
+                },
+                {
+                    "type": "qf-text-block",
+                    "name": "final_message",
+                    "text": "Submission page text",
+                    "description": ""
+                }
+            ]
         }
     ]
 }

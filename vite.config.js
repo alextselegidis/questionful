@@ -9,31 +9,16 @@
  * @since       v1.0.x
  * ---------------------------------------------------------------------------- */
 
-.App {
-    display: flex;
-    flex-direction: column;
-    min-height: 100vh;
-    width: 100%;
-}
+import { defineConfig } from "vite";
+import react from "@vitejs/plugin-react";
+import { resolve } from "path";
 
-.App header {
-    padding-top: 45px;
-    flex-shrink: 0;
-}
-
-.ContentArea {
-    flex: 1;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    padding: 20px;
-    overflow: visible !important;
-}
-
-.App footer {
-    flex-shrink: 0;
-    width: 100%;
-    padding: 15px 0;
-    font-size: 0.7rem;
-    text-align: center;
-}
+export default defineConfig({
+    plugins: [react()],
+    build: {
+        outDir: "build",
+        rollupOptions: {
+            input: resolve(__dirname, "index.html"),
+        },
+    },
+});
