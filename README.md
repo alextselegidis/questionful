@@ -1,7 +1,7 @@
 <h1 align="center">
     <br>
-        <a href="https://alextselegidis.com/get/questionful">
-            <img src="https://raw.githubusercontent.com/alextselegidis/questionful/master/logo.png" alt="Questionful" width="200">
+        <a href="https://questionful.org">
+            <img src="https://raw.githubusercontent.com/alextselegidis/questionful/main/logo.png" alt="Questionful" width="200">
         </a>
         <br>
         <br>
@@ -78,13 +78,16 @@ http://localhost:4000/submit
 ✅ Example console output:
 
 📬 Received questionnaire submission:
+
+```
 {
-"answers": [
-{ "questionId": 1, "answer": "Yes" },
-{ "questionId": 2, "answer": "No" }
-],
-"submittedAt": "2025-11-07T14:25:00Z"
+  "answers": [
+    { "questionId": 1, "answer": "Yes" },
+    { "questionId": 2, "answer": "No" }
+  ],
+  "submittedAt": "2025-11-07T14:25:00Z"
 }
+```
 
 You can adjust the port or endpoint inside fake-server.js as needed.
 
