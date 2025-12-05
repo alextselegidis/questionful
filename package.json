@@ -24,7 +24,6 @@
     "vite": "^5.4.20",
     "zip-cli": "^0.0.0"
   },
-  "description": "<h1 align=\"center\">\r     <br>\r         <a href=\"https://alextselegidis.com/get/questionful\">\r             <img src=\"https://raw.githubusercontent.com/alextselegidis/questionful/master/logo.png\" alt=\"Questionful\" width=\"200\">\r         </a>\r         <br>\r         <br>\r         Questionful\r     <br>\r </h1>",
   "main": "vite.config.js",
   "repository": {
     "type": "git",
