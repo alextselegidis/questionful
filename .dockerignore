@@ -1,0 +1,10 @@
+node_modules
+build
+build.zip
+.git
+.idea
+.DS_Store
+.env*
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*

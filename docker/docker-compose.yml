@@ -1,0 +1,41 @@
+# ----------------------------------------------------------------------------
+# Questionful - Questionnaires Made Simple
+#
+# @package     Questionful
+# @author      A.Tselegidis <alextselegidis@gmail.com>
+# @copyright   Copyright (c) Alex Tselegidis
+# @license     https://opensource.org/licenses/GPL-3.0 - GPLv3
+# @link        https://questionful.org
+# @since       v1.0.x
+# ----------------------------------------------------------------------------
+#
+# Docker Compose Configuration
+#
+# Usage:
+#   cd docker
+#   docker compose up -d              # build and start
+#   docker compose up -d --build      # rebuild and start
+#   docker compose down               # stop and remove
+#   docker compose logs -f            # follow logs
+#
+# ----------------------------------------------------------------------------
+
+services:
+  questionful:
+    image: alextselegidis/questionful:latest
+    build:
+      context: ..
+      dockerfile: docker/Dockerfile
+    ports:
+      - "8080:80"
+    restart: unless-stopped
+
+    # ── Runtime Config (uncomment ONE of the options below) ──
+
+    # Option A: Mount a JSON config file
+    # volumes:
+    #   - ./config:/config:ro
+
+    # Option B: Pass JSON via environment variable
+    # environment:
+    #   - QUESTIONFUL_JSON={"type":"form","title":"My Form","styles":{...},"pages":[...]}

@@ -22,6 +22,7 @@
   <a href="#about">About</a> •
   <a href="#setup">Setup</a> •
   <a href="#build">Build</a> •
+  <a href="#docker">Docker</a> •
   <a href="#license">License</a>
 </p>
 
@@ -60,6 +61,45 @@ To build your online questionnaire you have to add your questions to the
 Your questionnaire files will become available in the `build` directory, 
 serve them online! 😊
 
+
+## Docker
+
+You can run Questionful as a Docker container — ideal for deploying a pre-built questionnaire on your own network.
+
+### Quick Start
+
+```bash
+# Build the image (uses the default example config)
+./docker/docker-build.sh
+
+# Run the container
+docker run -p 8080:80 alextselegidis/questionful
+```
+
+Open [http://localhost:8080](http://localhost:8080) to see your questionnaire.
+
+### Custom Questionnaire
+
+Provide your own `Questionful.json` at runtime via a mounted volume:
+
+```bash
+docker run -p 8080:80 -v /path/to/config:/config:ro alextselegidis/questionful
+```
+
+Or via an environment variable:
+
+```bash
+docker run -p 8080:80 -e 'QUESTIONFUL_JSON={...}' alextselegidis/questionful
+```
+
+### Publish to Docker Hub
+
+```bash
+./docker/docker-build.sh v1.0.0
+./docker/docker-publish.sh v1.0.0
+```
+
+For the full Docker guide including Docker Compose, networking, and troubleshooting, see [docker.md](docker.md).
 
 ## API  Test
 

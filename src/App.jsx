@@ -12,7 +12,10 @@ import React, {useState, useEffect} from 'react';
 import ProgressBox from './ProgressBox';
 import QuestionBox from './QuestionBox';
 import './App.css';
-import configData from './Questionful.json';
+import defaultConfigData from './Questionful.json';
+
+// Allow runtime config override via Docker (window.__QUESTIONFUL_CONFIG__)
+const configData = window.__QUESTIONFUL_CONFIG__ || defaultConfigData;
 
 function App() {
     const [config, setConfig] = useState(null);
